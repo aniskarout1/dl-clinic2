@@ -11,7 +11,11 @@ try {
     console.log('Server process starting...');
 
     // Middleware
-    app.use(cors());
+    app.use(cors({
+        origin: ['https://dl-clinic2-213-frontend.onrender.com', 'http://localhost:5173'],
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        credentials: true
+    }));
     app.use(express.json());
 
     // Routes
