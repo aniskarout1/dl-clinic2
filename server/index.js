@@ -20,12 +20,12 @@ try {
 
     // Database Connection
     const PORT = process.env.PORT || 5000;
-    const MONGO_URI = process.env.MONGO_URI;
+    // Allow local fallback only if not on Render
+    const MONGO_URI = process.env.MONGO_URI || (process.env.NODE_ENV !== 'production' ? 'mongodb://127.0.0.1:27017/dl_clinic' : null);
 
     if (!MONGO_URI) {
-        console.error('❌ ERROR: MONGO_URI is not defined in environment variables!');
-        console.log('If you are on Render, add MONGO_URI to the Environment tab.');
-        console.log('If you are local, check your .env file.');
+        console.error('❌ ERROR: MONGO_URI is not defined!');
+        console.log('If you are on Render, you MUST add MONGO_URI to the Environment tab.');
         process.exit(1);
     }
 
