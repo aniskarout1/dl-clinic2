@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Stethoscope } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +22,7 @@ const Navbar = () => {
                 <div className="flex justify-between h-16">
                     <div className="flex items-center">
                         <Link to="/" className="flex items-center space-x-2">
-                            <Stethoscope className="h-8 w-8 text-medical-600" />
+                            <img src="/logo.svg" alt="DL Clinic Logo" className="h-10 w-10 object-contain" />
                             <span className="text-2xl font-bold text-gray-800">DL <span className="text-medical-600">Clinic</span></span>
                         </Link>
                     </div>
@@ -34,8 +34,8 @@ const Navbar = () => {
                                 key={link.name}
                                 to={link.path}
                                 className={`${isActive(link.path)
-                                        ? 'text-medical-600 border-b-2 border-medical-600'
-                                        : 'text-gray-600 hover:text-medical-500 transition-colors'
+                                    ? 'text-medical-600 border-b-2 border-medical-600'
+                                    : 'text-gray-600 hover:text-medical-500 transition-colors'
                                     } font-medium py-1`}
                             >
                                 {link.name}
@@ -71,8 +71,8 @@ const Navbar = () => {
                                 to={link.path}
                                 onClick={() => setIsOpen(false)}
                                 className={`block px-3 py-2 rounded-md text-base font-medium ${isActive(link.path)
-                                        ? 'text-medical-600 bg-medical-50'
-                                        : 'text-gray-600 hover:text-medical-600 hover:bg-gray-50'
+                                    ? 'text-medical-600 bg-medical-50'
+                                    : 'text-gray-600 hover:text-medical-600 hover:bg-gray-50'
                                     }`}
                             >
                                 {link.name}
