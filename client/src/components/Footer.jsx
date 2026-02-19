@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Stethoscope } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
 
 const Footer = () => {
     return (
@@ -10,7 +10,7 @@ const Footer = () => {
                     {/* Clinic Info */}
                     <div className="space-y-4">
                         <Link to="/" className="flex items-center space-x-2 text-white">
-                            <Stethoscope className="h-6 w-6 text-medical-400" />
+                            <img src="/logo.svg" alt="DL Clinic Logo" className="h-8 w-8 object-contain" />
                             <span className="text-xl font-bold">DL <span className="text-medical-400">Clinic</span></span>
                         </Link>
                         <p className="text-sm leading-relaxed">
