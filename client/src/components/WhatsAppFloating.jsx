@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 
 const WhatsAppFloating = () => {
     // Requirements
-    const phoneNumber = "918984679398";
+    const phoneNumber = "919937824461";
     const message = "Hello, I am interested in your services.";
 
     const containerRef = useRef(null);
