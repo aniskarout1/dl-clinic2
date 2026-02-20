@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import Admin from './pages/Admin';
 import Login from './pages/Login';
 import ProtectedRoute from './components/ProtectedRoute';
+import WhatsAppFloating from './components/WhatsAppFloating';
 
 function App() {
     return (
@@ -37,6 +38,7 @@ function App() {
                     </Routes>
                 </main>
                 <Footer />
+                <WhatsAppFloating />
             </div>
         </Router>
     );
