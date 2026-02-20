@@ -17,6 +17,7 @@ function App() {
     return (
         <Router>
             <div className="flex flex-col min-h-screen">
+                <WhatsAppFloating />
                 <Navbar />
                 <main className="flex-grow">
                     <Routes>
@@ -38,7 +39,6 @@ function App() {
                     </Routes>
                 </main>
                 <Footer />
-                <WhatsAppFloating />
             </div>
         </Router>
     );
