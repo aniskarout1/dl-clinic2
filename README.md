@@ -25,7 +25,7 @@ cd client
 npm install  # (If not already done)
 npm run dev
 ```
-* The website will be available at `http://localhost:5173`.
+* The website will be available at `[http://localhost:5173](https://dl-clinic2-213-frontend.onrender.com/)`.
 
 ## 📂 Project Structure
 * `/client`: React application with Tailwind CSS for the frontend.
